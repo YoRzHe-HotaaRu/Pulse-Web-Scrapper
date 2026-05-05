@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #F8F9FB;
+    color: #1A1D23;
+    line-height: 1.5;
+  }
+
+  ::selection {
+    background-color: #E85D3A;
+    color: #FFFFFF;
+  }
+
+  :focus-visible {
+    outline: 2px solid #E85D3A;
+    outline-offset: 2px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F0F2F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E2E6ED;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B95A5;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-text-inverse font-semibold px-6 py-2.5 shadow-sm;
+    @apply hover:bg-primary-hover;
+    @apply focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+    @apply transition-colors duration-150;
+    border-radius: 0;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-card text-text-primary font-medium px-6 py-2.5 border border-surface-border shadow-sm;
+    @apply hover:bg-surface-hover;
+    @apply focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+    @apply transition-colors duration-150;
+    border-radius: 0;
+  }
+
+  .card {
+    @apply bg-surface-card border border-surface-border shadow-sm p-6;
+    border-radius: 0;
+  }
+
+  .input-field {
+    @apply w-full bg-surface-white border border-surface-border text-text-primary px-4 py-2.5;
+    @apply placeholder:text-text-tertiary;
+    @apply focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary;
+    @apply transition-colors duration-150;
+    border-radius: 0;
+  }
+}
