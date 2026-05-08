@@ -1,6 +1,6 @@
-# Shopee Link Scrapper (PricePulse)
+# Webpage Link Scrapper (PricePulse)
 
-A full-stack app to search Shopee products, store product history, run AI analysis, and export results in multiple formats.
+A full-stack app to search webpage products, store product history, run AI analysis, and export results in multiple formats.
 
 ## Highlights
 
